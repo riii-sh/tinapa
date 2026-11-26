@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fil">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TINAPAngarap na Buhay</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="app-wrapper" id="app">
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+      <div class="sidebar-header">
+        <span>Menu</span>
+        <button id="close-btn" aria-label="Isara ang menu">✕</button>
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="index.html">Bahay</a></li>
+          <li><a href="about.html">Tungkol sa libro at sa pangkat</a></li>
+        </ul>
+      </nav>
+    </div>
+  </aside>
+
+  <main class="main-area">
+    <!-- Menu trigger sits outside the frame -->
+    <div class="menu-bar">
+      <button id="open-btn" class="menu-btn">☰ FPK Pangkat Dalawa</button>
+    </div>
+
+    <div class="grid-container">
+      <header class="top-box">
+        <img class="hero-photo" src="img/arch.jpg" alt="Arko ng Rosario, Cavite">
+        <div class="promo">
+          <h1>TINAPAngarap<br>na Buhay</h1>
+          <p class="promo-sub">Ang kabuhayan, kultura, at mga hamon ng industriya ng tinapa sa Rosario, Cavite.</p>
+          <a class="cta" href="about.html">Alamin ang kuwento ng libro</a>
+        </div>
+      </header>
+
+      <section class="card card-book" id="book">
+        <h2>Ang libro</h2>
+        <div class="book-row">
+          <img class="cover" src="img/cover.jpg" alt="Pabalat ng TINAPAngarap na Buhay">
+          <div class="book-text">
+            <p>Isang coffee table book ng larawan at kuwento tungkol sa Tinapang Salinas, mula sa mga taong gumagawa nito.</p>
+            <!-- TODO: replace # with your Canva share link -->
+            <a class="cta" href="#" target="_blank" rel="noopener">Buksan sa Canva</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="card card-map" id="map">
+        <h2>Rosario, Cavite</h2>
+        <iframe title="Mapa ng Rosario, Cavite" src="https://www.google.com/maps?q=Rosario,+Cavite,+Philippines&output=embed" loading="lazy"></iframe>
+      </section>
+
+      <section class="card card-photos" id="photos">
+        <h2>Mga larawan</h2>
+        <div class="photo-grid">
+          <img class="tall" src="img/racks.jpg" alt="Tinapang pinatutuyo sa mga rack">
+          <img src="img/boats.jpg" alt="Mga bangka sa baybayin">
+          <img src="img/kids2.jpg" alt="Mga batang naglalaro sa bangka">
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+
+<script>
+  const app = document.getElementById('app');
+  document.getElementById('open-btn').addEventListener('click', () => app.classList.add('sidebar-open'));
+  document.getElementById('close-btn').addEventListener('click', () => app.classList.remove('sidebar-open'));
+</script>
+</body>
+</html>
